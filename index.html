@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李孟雷 - 简历</title>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-muted: #888;
+    --accent: #2c4159;
+    --border-strong: #1a1a1a;
+    --border-soft: #d8d8d8;
+    --border-hair: #ececec;
+    --time-col: 140px;
+  }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 40px 52px 44px;
+    background: #fff;
+  }
+
+  /* Tabular numerals — dates and ids align vertically */
+  .time, .edu-table .time {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  /* ===== Header ===== */
+  .header {
+    text-align: center;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--border-strong);
+    margin-bottom: 22px;
+    position: relative;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    transform: translateX(-50%);
+  }
+
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .contact-item svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+
+  .contact-sep {
+    width: 1px;
+    height: 11px;
+    background: var(--border-soft);
+  }
+
+  /* ===== Section ===== */
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .section:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 0 0 6px 12px;
+    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 14px;
+    color: var(--text-primary);
+    position: relative;
+  }
+
+  .section-title .section-subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-left: 4px;
+  }
+
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 3px;
+    height: 15px;
+    background: var(--accent);
+  }
+
+  .subsection-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin: 4px 0 10px;
+  }
+
+  .subsection-title:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  .subsection-title.no-line::after {
+    display: none;
+  }
+
+  .subsection-title.no-line.tight:not(:first-child) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .subsection-title.no-line:not(:first-child) {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border-soft);
+  }
+
+
+
+  .subsection-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-hair);
+  }
+
+  /* ===== Education ===== */
+  .edu-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .edu-table td {
+    padding: 3px 0;
+    vertical-align: top;
+    font-size: 13px;
+  }
+
+  .edu-table .time {
+    width: 170px;
+    white-space: nowrap;
+    color: var(--text-secondary);
+  }
+
+  .edu-table .degree {
+    width: 200px;
+    white-space: nowrap;
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding-right: 6px;
+  }
+
+  .edu-table .school {
+    color: var(--text-primary);
+  }
+
+  .edu-table .school .major {
+    color: var(--text-secondary);
+  }
+
+  /* ===== Experience ===== */
+  .exp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-bottom: 22px;
+  }
+
+  .exp-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .exp-item.exp-item-continued {
+    margin-top: -10px;
+  }
+
+  .exp-meta {
+    width: 168px;
+    flex-shrink: 0;
+  }
+
+  .exp-meta .time {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+  }
+
+  .exp-meta .company {
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  .exp-meta .company.freelance {
+    font-weight: 600;
+    color: #6a7fa8;
+  }
+
+  .continued-mark {
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-right: 4px;
+  }
+
+  .exp-lines {
+    padding-left: 2px; /* 为 bullet 腾出空间 */
+  }
+
+  .exp-line .bullet {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  .exp-lines {
+    flex: 1;
+    min-width: 0;
+    padding-top: 1px;
+  }
+
+  .exp-line {
+    margin-bottom: 4px;
+  }
+
+  .exp-line {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 2px;
+    color: var(--text-secondary);
+  }
+
+  .exp-line:last-child {
+    margin-bottom: 0;
+  }
+
+  .exp-line .tag {
+    flex-shrink: 0;
+    width: 48px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 1px;
+  }
+
+  .exp-line .tag::after { 
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: var(--border-soft);
+    margin: 0 8px 0 6px;
+    vertical-align: middle;
+  }
+
+  .exp-shared {
+    position: relative;
+    background: #f7f8fa;
+    border: 1px solid var(--border-hair);
+    border-left: 3px solid var(--accent);
+    border-radius: 2px;
+    padding: 10px 16px 10px 14px;
+    margin-bottom: 16px;
+  }
+
+  .exp-shared::before {
+    content: '通 用';
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background: #fff;
+    padding: 0 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--accent);
+  }
+
+  .exp-shared .exp-line {
+    margin-bottom: 2px;
+  }
+
+  .exp-shared .exp-line:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ===== Project ===== */
+  .proj-item {
+    margin-bottom: 12px;
+  }
+
+  .proj-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .proj-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+
+  .proj-header .time {
+    width: var(--time-col);
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .proj-header .name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .proj-header .name .freelance {
+    color: #6a7fa8;
+  }
+
+  .proj-item-inline .proj-header {
+    align-items: baseline;
+  }
+
+  .proj-item-inline .proj-header .name {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .proj-item-inline .proj-header .name .desc {
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  .proj-detail {
+    padding-left: var(--time-col);
+  }
+
+  .proj-detail ul {
+    padding-left: 16px;
+    list-style: none;
+  }
+
+  .proj-detail li {
+    position: relative;
+    color: var(--text-secondary);
+    margin-bottom: 3px;
+    padding-left: 2px;
+  }
+
+  .proj-detail li::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* 嵌套子项：实现下展开 Harness / 路径拆分 等子条目 */
+  .proj-detail li > ul {
+    margin: 6px 0 4px;
+    margin-left: 2px;
+    padding-left: 14px;
+    border-left: 1.5px solid var(--border-hair);
+  }
+
+  .proj-detail li > ul > li {
+    margin-bottom: 6px;
+    padding-left: 4px;
+    color: var(--text-secondary);
+  }
+
+  .proj-detail li > ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .proj-detail li > ul > li::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 0;
+    opacity: 0.75;
+  }
+
+  .proj-detail li > ul > li > strong {
+    color: var(--text-primary);
+  }
+
+  /* 第三级：在子项下继续展开要点（如路径拆分的具体分点） */
+  .proj-detail li > ul > li > ul {
+    margin: 4px 0 2px;
+    padding-left: 12px;
+    border-left: none;
+  }
+
+  .proj-detail li > ul > li > ul > li {
+    margin-bottom: 3px;
+    padding-left: 4px;
+    color: var(--text-secondary);
+  }
+
+  .proj-detail li > ul > li > ul > li::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 11px;
+    width: 5px;
+    height: 1px;
+    background: var(--text-muted);
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .proj-detail li > ul > li > ul > li > strong {
+    color: var(--text-primary);
+  }
+
+  .placeholder {
+    color: #b8b8b8;
+    font-style: italic;
+  }
+
+  .proj-detail li.placeholder::before {
+    background: #d0d0d0;
+  }
+
+  /* ===== Personal Profile ===== */
+  .eval-list {
+    padding-left: var(--time-col);
+    list-style: none;
+  }
+
+  .eval-list li {
+    position: relative;
+    color: var(--text-secondary);
+    margin-bottom: 3px;
+  }
+
+  .eval-list li::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .eval-list li.placeholder::before {
+    background: #d0d0d0;
+  }
+
+  /* eval-list 嵌套子项：用于 Harness 个人理解等展开 */
+  .eval-list li > ul {
+    margin: 6px 0 4px;
+    margin-left: 2px;
+    padding-left: 14px;
+    border-left: 1.5px solid var(--border-hair);
+    list-style: none;
+  }
+
+  .eval-list li > ul > li {
+    position: relative;
+    margin-bottom: 6px;
+    padding-left: 4px;
+    color: var(--text-secondary);
+  }
+
+  .eval-list li > ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .eval-list li > ul > li::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 0;
+    opacity: 0.75;
+  }
+
+  .eval-list li > ul > li > strong {
+    color: var(--text-primary);
+  }
+
+  /* ===== Print ===== */
+  @media print {
+    body { background: #fff; }
+    .page {
+      margin: 0;
+      padding: 36px 48px 40px;
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>李 孟 雷</h1>
+    <div class="contact">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span>18901262688</span>
+      </div>
+      <span class="contact-sep"></span>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.532c0 2.218 1.174 4.208 3.014 5.556l-.752 2.268 2.634-1.36a10.2 10.2 0 0 0 3.795.726c.282 0 .56-.012.836-.032a6.5 6.5 0 0 1-.258-1.794c0-3.622 3.36-6.564 7.506-6.564.26 0 .516.014.768.038C16.614 4.698 13.002 2.188 8.691 2.188zm-2.6 4.18a1.03 1.03 0 1 1 0 2.06 1.03 1.03 0 0 1 0-2.06zm5.2 0a1.03 1.03 0 1 1 0 2.06 1.03 1.03 0 0 1 0-2.06zM16.778 9.2c-3.636 0-6.59 2.546-6.59 5.684 0 3.138 2.954 5.684 6.59 5.684a7.8 7.8 0 0 0 2.94-.564l2.04 1.054-.582-1.756c1.428-1.12 2.352-2.754 2.352-4.418-.048-3.138-3.002-5.684-6.75-5.684zm-2.44 3.364a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6zm4.88 0a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/></svg>
+        <span>微信同手机号</span>
+      </div>
+      <span class="contact-sep"></span>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+        <span>limenglei70921@126.com</span>
+      </div>
+      <span class="contact-sep"></span>
+      <div class="contact-item">
+        <span>出生年月：1997.11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">教 育 经 历</div>
+    <table class="edu-table">
+      <tr>
+        <td class="time">2015.09 - 2019.06</td>
+        <td class="degree">本科（双学位）</td>
+        <td class="school">北京理工大学 + 澳大利亚国立大学 <span class="major">· 电子科学与技术 · 无线通信 · 2+2 联合培养</span></td>
+      </tr>
+      <tr>
+        <td class="time">2019.07 - 2020.12</td>
+        <td class="degree">硕士</td>
+        <td class="school">澳大利亚国立大学 <span class="major">· 计算机科学 · 数据科学</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Work Experience -->
+  <div class="section">
+    <div class="section-title">工 作 经 历 <span class="section-subtitle">· 软件开发工程师</span></div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="time">2020.12 - 2023.09</div>
+        <div class="company">京东物流 · 大家电配送</div>
+      </div>
+      <div class="exp-lines">
+        <div class="exp-line"><span class="tag">业 务</span><span>大件配送系统，覆盖配送主流程、增值服务、计费与结算、对内运营管理等多个核心模块</span></div>
+        <div class="exp-line"><span class="tag">特 点</span><span>微服务架构；业务复杂、历史包袱重，日常枪林弹雨</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="time">2023.10 - 2024.02</div>
+        <div class="company">快手 · 主站搜索</div>
+      </div>
+      <div class="exp-lines">
+        <div class="exp-line"><span class="tag">业 务</span><span>搜索页 Server 层，负责召回结果数据补全与加工、A/B 实验、版本控制等逻辑。主要承接电商搜索需求</span></div>
+        <div class="exp-line"><span class="tag">特 点</span><span>大流量、高并发，稳定性要求高</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="time">2024.02 - 2024.08</div>
+        <div class="company freelance">独立项目开发</div>
+      </div>
+      <div class="exp-lines">
+        <div class="exp-line"><span class="tag">业 务</span><span>招标数据同步至企业飞书、医疗服务微信小程序</span></div>
+        <div class="exp-line"><span class="tag">特 点</span><span>对接客户，完成需求沟通、方案设计与开发交付</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="time">2024.08 - 2025.04</div>
+        <div class="company">网易有道 · 精品课中台</div>
+      </div>
+      <div class="exp-lines">
+        <div class="exp-line"><span class="tag">业 务</span><span>物流、财务、订单、课程管理等通用基建服务开发与维护</span></div>
+        <div class="exp-line"><span class="tag">特 点</span><span>中台微服务</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-item-continued">
+      <div class="exp-meta">
+        <div class="time">2025.04 - 至今</div>
+        <div class="company">网易有道 · 海外广告</div>
+      </div>
+      <div class="exp-lines">
+        <div class="exp-line"><span class="tag">业 务</span><span>AI 相关功能与工具开发：达人推广任务管理系统、素材制作工具、财务系统对接、大模型集成</span></div>
+        <div class="exp-line"><span class="tag">特 点</span><span>海外业务、Vibe Coding、AI功能产品开发&迭代</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Experience -->
+  <div class="section">
+    <div class="section-title">项 目 经 历</div>
+
+    <div class="subsection-title no-line tight">古法 · 2020 — 2025.10</div>
+
+    <div class="proj-item proj-item-inline">
+      <div class="proj-header">
+        <span class="time">2022.04 - 2022.12</span>
+        <span class="name">京东 · 大件计费模块迁移重构<span class="desc">拆解旧流程与职责划分，能力下沉中台计费平台，重设数据模型与微服务架构，并补齐合单计费的日志监控与数据校验</span></span>
+      </div>
+    </div>
+
+    <div class="proj-item proj-item-inline">
+      <div class="proj-header">
+        <span class="time">2022.01 - 2022.06</span>
+        <span class="name">京东 · 配送系统核心微服务性能治理<span class="desc">十余个核心微服务逐项根因定位与整改（CPU、接口耗时、慢 SQL、缓存、应用分组），减少运维问题、优化系统性能</span></span>
+      </div>
+    </div>
+
+    <div class="proj-item proj-item-inline">
+      <div class="proj-header">
+        <span class="time">2024.12 - 2025.03</span>
+        <span class="name">网易有道 · 物流核心流程治理与人工发货优化<span class="desc">物流发货核心流程逐项整改（日志、重试、消息、监控、锁库），并重构人工发货与成本归属逻辑</span></span>
+      </div>
+    </div>
+
+    <div class="subsection-title no-line">AI · 2025.11 — 至 今</div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.04 - 2026.05</span>
+        <span class="name">财务对接 · 对账自动化</span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li><strong>背景</strong>：海外广告月度财务对账，涉及账期记录、汇率换算、账单推送与异常 case 处理</li>
+          <li><strong>实现</strong>：先以后端模块完成账单数据加工与推账对接；后沉淀对账 Skill 套件，覆盖数据校验、明细核对、跨月异常处理、账单导出。提高月结效率</li>
+          <li><strong>技术栈</strong>：Java 后端 + Python Skill</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2025.11 - 2026.03</span>
+        <span class="name">有道视觉魔盒 · AI 素材制作工具</span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li><strong>背景</strong>：为海外广告业务提供 AI 素材生成能力</li>
+          <li><strong>实现</strong>：接入 Gemini、即梦、nano-banana，封装统一素材生成 API；覆盖图片缩放裁剪、封面提取、素材爆款要素分析等功能场景；通过提示词工程与接口参数(topK,temperature)调试，控制模型输出</li>
+          <li><strong>技术栈</strong>：Java 后端</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.02 - 至今</span>
+        <span class="name">基于 OpenClaw · 结案报告自动化</span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li><strong>背景</strong>：销售助理需从 TikTok、YouTube、Instagram 等 7 个平台采集推广交付数据（定制化截图、播放量、点赞、评论），结合系统达人信息生成结案报告；流程繁琐、重复性强，人工操作耗时且易出错</li>
+          <li><strong>实现</strong>：飞书群聊驱动，OpenClaw 调度，Python 主脚本 + 内嵌 JS 完成点击、滚动、Hover、插件渲染等交互，结果回填飞书或导出 Excel</li>
+          <li><strong>开发流程</strong>：以报告样板为正确性锚点，Agent 探索网页结构 → 实现 → 与样板比对 → 反馈修复，闭环迭代</li>
+          <li><strong>模型</strong>：Opus 4.7 出方案，GLM-5.1 开发调试，OpenClaw 运行时用 MiniMax-M2.7-highspeed</li>
+          <li><strong>技术栈</strong>：Python</li>
+          <li><strong>迭代</strong>：持续迭代中，包含性能优化、新报告模板变更支持等；近一月已处理 1 万+ 视频链接的截图与数据提取，整体运行稳定</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name"><span class="freelance">独立项目</span> · 招聘流程管理 App</span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li><strong>背景</strong>：为外部人资公司开发招聘流程管理 App，三人小组，主导需求方对接与整体推进</li>
+          <li><strong>技术栈</strong>：Java 后端 + Vue 前端 + uniapp 移动端</li>
+          <li><strong>实现</strong>：以 HTML 原型实时演示与调整，现场确认细节，沉淀为后续开发的"正确性锚点"；并基于该锚点展开推进：
+            <ul>
+              <li><strong>Harness 流水</strong>：以原型反向驱动——自动产出工程 Plan（任务拆解、关键文件标注、架构权衡）→ 生成单元测试骨架 → 脚本驱动浏览器跑本地 E2E 全链路校验 → 自动化部署；各阶段嵌入 Review 与测试卡点，progress 可追踪，错误就地收敛不蔓延下游</li>
+              <li><strong>路径结构拆分</strong>：按事项上下文对文件路径做精细化拆分，让每个路径下的上下文"不多不少"
+                <ul>
+                  <li><strong>多则</strong>：Agent 加载无关代码、决策受干扰且浪费 Token</li>
+                  <li><strong>少则</strong>：需跨目录跳转、易理解错或漏改</li>
+                  <li><strong>拆分依据</strong>：以事项为边界，相关代码 / 配置 / 测试 / 文档同路径自洽闭环，跨事项共享逻辑下沉公共层</li>
+                  <li><strong>并行收益</strong>：多 Agent 各自只加载本路径上下文，互不抢占 context window</li>
+                  <li><strong>协同收益</strong>：多人协作时路径即职责边界，冲突面与 Review 范围被压到最小</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>开发流程</strong>：对齐需求 → 建立正确性锚点（HTML 原型）→ 工程与测试方案 → 分阶段实现，每步穿插 Review 与测试，记录进度；主体完成后接入支付、实名认证、短信 / 邮件等三方能力，人工走查功能点</li>
+          <li><strong>模型</strong>：基于 GLM-5.1 Coding Plan 多 Agent 并行推进</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">EasyCC 桌面App · 基于Claude Code UI增强</span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li><strong>背景</strong>：在 Claude Code 外套一层 UI 增强工具，强化 Skill 分发、使用体验与迭代闭环</li>
+          <li><strong>技术栈</strong>：TypeScript 为主（Electron + React 全家桶），Skill 脚本 Python，前端样式 HTML + CSS</li>
+          <li><strong>实现&优势</strong>：
+            <ul>
+              <li><strong>按需拉起，不预装常驻</strong>：传统 Skill 预装常驻、长期占用上下文；EasyCC 改为用户点选启动时才拉起独立窗口、加载对应 Skill，用完即走，天然引导"一事一窗"，上下文互不污染</li>
+              <li><strong>轻量迭代闭环</strong>：问题&需求反馈 → 本地微调 → git diff 自动以 Issue 形式提报 → 产研可基于 Issue 快速迭代</li>
+              <li><strong>一键秒级更新</strong>：Skill 仅包含 md 与脚本文本，纯 Git 拉取无需编译，用户侧更新秒级生效</li>
+              <li><strong>开箱即用的环境准备</strong>：内置环境准备 Skill，端内自动维护 Python 等依赖，避免用户被环境问题阻塞</li>
+            </ul>
+          </li>
+          <li><strong>模型</strong>：Opus 4.7 出方案，GLM-5.1 开发调试</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">Ads-Agent · 嵌入式网页 Agent</span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li><strong>背景</strong>：组内 Web 端对话式业务智能体建设，覆盖知识检索、MCP、Skill Package、权限管控及反馈闭环等核心模块</li>
+          <li><strong>技术栈</strong>：Python (FastAPI) + React + TypeScript + MySQL + Chroma + Redis；Agent 框架基于 LangGraph</li>
+          <li><strong>实现</strong>：主导后端架构与项目路径规划、前后端交互接口设计，与同事协作搭建 RAG 检索链路；典型接口如 SSE 流式对话 / 反馈写入 / 文档同步等
+            <ul>
+              <li><strong>对话能力</strong>：普通问答、SSE 流式输出、会话历史、附件图片上传</li>
+              <li><strong>知识入库</strong>：Confluence / Markdown / PDF / DOCX 多源入库，多 provider 检索与重排</li>
+              <li><strong>扩展接入</strong>：MCP 与本地 Skill Package 作为 provider 统一接入 Runtime</li>
+              <li><strong>反馈闭环</strong>：正负反馈、人工修正、QA 写入与审核工作台</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Personal Profile -->
+  <div class="section">
+    <div class="section-title">个 人 概 述</div>
+    <ul class="eval-list">
+      <li>致力于以 AI 主导全链路工程交付，依托 Harness 工程让 AI 做得好、做得快、省 Token</li>
+      <li>以后端设计与开发为基石，兼具用户需求洞察与沟通、产品方案、UI交互、前端开发、数据开发、运维部署在内的全栈工程能力；也具备较好的项目管理与人员组织能力</li>
+      <li>优秀的沟通能力，优秀的学习能力，极致的工程实践与总结能力</li>
+      <li><strong>个人理解的 Harness 工程核心能力</strong>：
+        <ul>
+          <li><strong>需求洞察与客户沟通</strong></li>
+          <li><strong>技术审美与产品力审美</strong></li>
+          <li><strong>工程团队协作</strong></li>
+          <li><strong>AI工程阵地规划、上下文工程管理、提示词工程</strong></li>
+          <li><strong>模型能力评估与选型</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>
