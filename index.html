@@ -108,6 +108,64 @@
     background: var(--border-soft);
   }
 
+  .contact-link {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 10px;
+  }
+
+  .contact-link-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 12px;
+    background: rgba(44, 65, 89, 0.04);
+    border: 1px solid rgba(44, 65, 89, 0.12);
+    border-radius: 999px;
+    line-height: 1.5;
+  }
+
+  .contact-link-inner svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+
+  .contact-link-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--accent);
+  }
+
+  .contact-link-divider {
+    width: 1px;
+    height: 10px;
+    background: rgba(44, 65, 89, 0.2);
+  }
+
+  .contact-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    border-bottom: 1px solid transparent;
+  }
+
+  .contact-link a:hover {
+    border-bottom-color: var(--accent);
+  }
+
+  @media print {
+    .contact-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  }
+
   /* ===== Section ===== */
   .section {
     margin-bottom: 20px;
@@ -600,8 +658,16 @@
       </div>
       <span class="contact-sep"></span>
       <div class="contact-item">
-        <span>出生年月：1997.11</span>
+        <span>1997.11</span>
       </div>
+    </div>
+    <div class="contact-link">
+      <span class="contact-link-inner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="contact-link-label">在线浏览本页</span>
+        <span class="contact-link-divider"></span>
+        <a href="https://lumos-789.github.io/" target="_blank">https://lumos-789.github.io/</a>
+      </span>
     </div>
   </div>
 
