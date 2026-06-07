@@ -775,7 +775,7 @@
       </div>
     </div>
 
-    <div class="subsection-title no-line">AI · 2025.11 — 至 今</div>
+    <div class="subsection-title no-line" style="margin-top:28px">AI · 2025.11 — 至 今</div>
 
     <div class="proj-item">
       <div class="proj-header">
@@ -877,108 +877,52 @@
   <div class="section">
     <div class="section-title">个 人 项 目 <span class="section-subtitle">· Agent 探索</span></div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">Guster · 多项目 AI Agent 中枢 <a href="https://github.com/Lumos-789/Guster" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>以 Agent 角色统筹 8+ 项目的进度追踪、规划决策与新项目孵化</li>
-          <li><strong>技术栈</strong>：Claude Code CLI + Markdown DSL</li>
-          <li><strong>Skill 工作流体系</strong>：11 个标准化流程（三级收工、审问、转手/接手、自驱等），markdown 即 skill，Agent 读懂就执行</li>
-          <li><strong>知识管理</strong>：Knowledge + Memory 双层架构，引用频率驱动的自动加载/退化</li>
-          <li><strong>自驱进化</strong>：OODA 闭环 — 经验提取 → 反思 → 洞察 → 行动，持续自我改进</li>
-        </ul>
+        <span class="name">Guster · 多项目 AI Agent 中枢 <a href="https://github.com/Lumos-789/Guster" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">Claude Code CLI + Markdown DSL · 统筹 8+ 项目进度/规划/孵化 · 11 个 Skill 工作流（三级收工/审问/转手接手/自驱等）· Knowledge+Memory 双层知识管理 · OODA 闭环自驱进化</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">AutoGoods · 多平台内容自动发布 <a href="https://github.com/Lumos-789/AutoGoods" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>CDP 驱动多平台内容自动化发布，覆盖知乎、小红书、B站</li>
-          <li><strong>技术栈</strong>：Python + CDP (websockets) + Draft.js/ProseMirror 注入</li>
-          <li><strong>平台适配</strong>：CDP 浏览器自动化攻克无 API 平台（知乎、小红书），统一 Publisher 抽象层，新增平台只需实现接口</li>
-          <li><strong>质量保障</strong>：AI 辅助内容生成 + 4 轮 Review（格式/调性/AI味/元数据泄漏检测）</li>
-        </ul>
+        <span class="name">AutoGoods · 多平台内容自动发布 <a href="https://github.com/Lumos-789/AutoGoods" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">Python + CDP · 覆盖知乎/小红书/B站 · CDP 自动化攻克无 API 平台 · 统一 Publisher 抽象层 · AI 内容生成 + 4 轮 Review</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">VoiceTranser · 语音输入智能精炼 <a href="https://github.com/Lumos-789/VoiceTranser" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>全局热键录音 → 本地转写 → AI 精炼 → 自动粘贴，日常高频使用</li>
-          <li><strong>技术栈</strong>：Python + mlx-whisper (Apple Silicon 本地 STT) + MiniMax (AI 精炼)</li>
-          <li><strong>本地优先</strong>：STT 完全本地运行（mlx-whisper large-v3），无网络依赖，零延迟响应</li>
-          <li><strong>生产级稳定</strong>：本地 HTTP toggle 服务器 + 开机自启 + 崩溃自动恢复</li>
-        </ul>
+        <span class="name">VoiceTranser · 语音输入智能精炼 <a href="https://github.com/Lumos-789/VoiceTranser" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">Python + mlx-whisper large-v3 本地 STT + MiniMax AI 精炼 · 全局热键 → 本地转写 → 精炼 → 自动粘贴 · 开机自启 + 崩溃恢复，日常高频使用</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">EasyCC · Claude Code UI 增强 <a href="https://github.com/Lumos-789/EasyCC" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>Electron 桌面 App，为 Claude Code CLI 提供 UI 增强和 Flow 插件系统</li>
-          <li><strong>技术栈</strong>：Electron + React 18 + TypeScript + Vite + Zustand</li>
-          <li><strong>分层架构</strong>：Renderer → Preload → Main → Core，Core 层零 Electron 依赖，可独立测试</li>
-          <li><strong>Flow 插件</strong>：目录即插件，FLOW.md frontmatter 定义元数据，运行时动态加载</li>
-        </ul>
+        <span class="name">EasyCC · Claude Code UI 增强 <a href="https://github.com/Lumos-789/EasyCC" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">Electron + React 18 + TS + Vite · 4 层架构 Renderer→Preload→Main→Core · Flow 插件系统（目录即插件）· 多 Profile + API Key 加密</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">Agent Skills · 可复用 Claude Code Skill 合集 <a href="https://github.com/Lumos-789/agent-skills" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>个人 Agent 框架沉淀的可复用 Skill 合集，copy 到 <code style="font-size:12px;background:rgba(0,0,0,0.04);padding:0 4px;border-radius:3px">~/.claude/skills/</code> 即可使用</li>
-          <li><strong>转手/接手</strong>：FIFO 交接队列，跨 session 传递任务（原创设计）</li>
-          <li><strong>三级收工</strong>：事项/项目/日终，自动追踪进度与经验提取</li>
-          <li><strong>审问</strong>：逐问题逼出设计决策，建术语表，记录 ADR</li>
-          <li><strong>自驱/复盘</strong>：OODA 闭环积累经验与反思，驱动自我进化</li>
-        </ul>
+        <span class="name">Agent Skills · 可复用 Skill 合集 <a href="https://github.com/Lumos-789/agent-skills" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">转手/接手 FIFO 交接队列（原创）· 三级收工自动追踪 · 审问逼出设计决策 + ADR · 自驱/复盘 OODA 闭环</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.06 - 至今</span>
-        <span class="name">三屏壁纸轮换 · macOS 多显示器自动化 <a href="https://github.com/Lumos-789/wallpaper-rotation" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>一键切换三屏壁纸组，主屏/左屏/右屏按主题同步切换（3D 概念 / 二次元 / 写实），12 组主题循环播放</li>
-          <li><strong>技术栈</strong>：Shell Script + macOS AppleScript + osascript</li>
-          <li><strong>设计</strong>：配置驱动（sets.conf 定义每组三屏图片），状态文件记录索引，执行即切换到下一组，无依赖、即开即用</li>
-        </ul>
+        <span class="name">三屏壁纸轮换 <a href="https://github.com/Lumos-789/wallpaper-rotation" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">Shell + AppleScript · 配置驱动 12 组三屏主题同步切换 · 状态循环 · 无依赖即开即用</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">Ctrl+P 全局启动 · macOS Service 快捷键 <a href="https://github.com/Lumos-789/ctrl-p-launcher" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li>全局 Ctrl+P 一键拉起 Terminal 并启动 Claude Code CLI 进入指定项目目录，任意应用内均可用</li>
-          <li><strong>技术栈</strong>：macOS Automator Service + AppleScript</li>
-          <li><strong>设计</strong>：通过 Automator 注册为系统 Service，绑定全局快捷键，AppleScript 控制 Terminal 新窗口 + cd + 启动 CLI，零延迟</li>
-        </ul>
+        <span class="name">Ctrl+P 全局启动 <a href="https://github.com/Lumos-789/ctrl-p-launcher" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a><span class="desc">macOS Automator Service + AppleScript · 全局 Ctrl+P 一键拉起 Terminal 启动 Claude Code CLI 进入项目目录</span></span>
       </div>
     </div>
 
