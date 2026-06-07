@@ -808,12 +808,12 @@
     <div class="proj-item">
       <div class="proj-header">
         <span class="time">2026.02 - 至今</span>
-        <span class="name">基于 OpenClaw · 结案报告自动化</span>
+        <span class="name">销售助理辅助 · 数据采集与报告自动化</span>
       </div>
       <div class="proj-detail">
         <ul>
-          <li><strong>背景</strong>：销售助理需从 TikTok、YouTube、Instagram 等 7 个平台采集推广交付数据（定制化截图、播放量、点赞、评论），结合系统达人信息生成结案报告；流程繁琐、重复性强，人工操作耗时且易出错</li>
-          <li><strong>实现</strong>：飞书群聊驱动，OpenClaw 调度，Python 主脚本 + 内嵌 JS 完成点击、滚动、Hover、插件渲染等交互，结果回填飞书或导出 Excel</li>
+          <li><strong>背景</strong>：销售助理需从 TikTok、YouTube、Instagram 等 7 个平台采集推广交付数据（定制化截图、播放量、点赞、评论），结合系统达人信息生成结案报告、加工模板数据；流程繁琐、重复性强，人工操作耗时且易出错</li>
+          <li><strong>实现</strong>：飞书群聊驱动，OpenClaw 调度，Python 主脚本 + 内嵌 JS 完成点击、滚动、Hover、插件渲染等交互，结果回填飞书或导出 Excel；除结案报告外，还覆盖模板数据加工、多平台数据聚合等场景</li>
           <li><strong>开发流程</strong>：以报告样板为正确性锚点，Agent 探索网页结构 → 实现 → 与样板比对 → 反馈修复，闭环迭代</li>
           <li><strong>模型</strong>：Opus 4.7 出方案，GLM-5.1 开发调试，OpenClaw 运行时用 MiniMax-M2.7-highspeed</li>
           <li><strong>技术栈</strong>：Python</li>
@@ -854,28 +854,6 @@
     <div class="proj-item">
       <div class="proj-header">
         <span class="time">2026.05 - 至今</span>
-        <span class="name">EasyCC 桌面App · 基于Claude Code UI增强</span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li><strong>背景</strong>：在 Claude Code 外套一层 UI 增强工具，强化 Skill 分发、使用体验与迭代闭环</li>
-          <li><strong>技术栈</strong>：TypeScript 为主（Electron + React 全家桶），Skill 脚本 Python，前端样式 HTML + CSS</li>
-          <li><strong>实现&优势</strong>：
-            <ul>
-              <li><strong>按需拉起，不预装常驻</strong>：传统 Skill 预装常驻、长期占用上下文；EasyCC 改为用户点选启动时才拉起独立窗口、加载对应 Skill，用完即走，天然引导"一事一窗"，上下文互不污染</li>
-              <li><strong>轻量迭代闭环</strong>：问题&需求反馈 → 本地微调 → git diff 自动以 Issue 形式提报 → 产研可基于 Issue 快速迭代</li>
-              <li><strong>一键秒级更新</strong>：Skill 仅包含 md 与脚本文本，纯 Git 拉取无需编译，用户侧更新秒级生效</li>
-              <li><strong>开箱即用的环境准备</strong>：内置环境准备 Skill，端内自动维护 Python 等依赖，避免用户被环境问题阻塞</li>
-            </ul>
-          </li>
-          <li><strong>模型</strong>：Opus 4.7 出方案，GLM-5.1 开发调试</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="proj-item">
-      <div class="proj-header">
-        <span class="time">2026.05 - 至今</span>
         <span class="name">Ads-Agent · 嵌入式网页 Agent</span>
       </div>
       <div class="proj-detail">
@@ -895,6 +873,89 @@
     </div>
   </div>
 
+  <!-- Personal Projects -->
+  <div class="section">
+    <div class="section-title">个 人 项 目 <span class="section-subtitle">· Agent 探索</span></div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">Guster · 多项目 AI Agent 中枢 <a href="https://github.com/Lumos-789/Guster" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li>以 Agent 角色统筹 8+ 项目的进度追踪、规划决策与新项目孵化</li>
+          <li><strong>技术栈</strong>：Claude Code CLI + Markdown DSL</li>
+          <li><strong>Skill 工作流体系</strong>：11 个标准化流程（三级收工、审问、转手/接手、自驱等），markdown 即 skill，Agent 读懂就执行</li>
+          <li><strong>知识管理</strong>：Knowledge + Memory 双层架构，引用频率驱动的自动加载/退化</li>
+          <li><strong>自驱进化</strong>：OODA 闭环 — 经验提取 → 反思 → 洞察 → 行动，持续自我改进</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">AutoGoods · 多平台内容自动发布 <a href="https://github.com/Lumos-789/AutoGoods" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li>CDP 驱动多平台内容自动化发布，覆盖知乎、小红书、B站</li>
+          <li><strong>技术栈</strong>：Python + CDP (websockets) + Draft.js/ProseMirror 注入</li>
+          <li><strong>平台适配</strong>：CDP 浏览器自动化攻克无 API 平台（知乎、小红书），统一 Publisher 抽象层，新增平台只需实现接口</li>
+          <li><strong>质量保障</strong>：AI 辅助内容生成 + 4 轮 Review（格式/调性/AI味/元数据泄漏检测）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">VoiceTranser · 语音输入智能精炼 <a href="https://github.com/Lumos-789/VoiceTranser" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li>全局热键录音 → 本地转写 → AI 精炼 → 自动粘贴，日常高频使用</li>
+          <li><strong>技术栈</strong>：Python + mlx-whisper (Apple Silicon 本地 STT) + MiniMax (AI 精炼)</li>
+          <li><strong>本地优先</strong>：STT 完全本地运行（mlx-whisper large-v3），无网络依赖，零延迟响应</li>
+          <li><strong>生产级稳定</strong>：本地 HTTP toggle 服务器 + 开机自启 + 崩溃自动恢复</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">EasyCC · Claude Code UI 增强 <a href="https://github.com/Lumos-789/EasyCC" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li>Electron 桌面 App，为 Claude Code CLI 提供 UI 增强和 Flow 插件系统</li>
+          <li><strong>技术栈</strong>：Electron + React 18 + TypeScript + Vite + Zustand</li>
+          <li><strong>分层架构</strong>：Renderer → Preload → Main → Core，Core 层零 Electron 依赖，可独立测试</li>
+          <li><strong>Flow 插件</strong>：目录即插件，FLOW.md frontmatter 定义元数据，运行时动态加载</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <span class="time">2026.05 - 至今</span>
+        <span class="name">Agent Skills · 可复用 Claude Code Skill 合集 <a href="https://github.com/Lumos-789/agent-skills" target="_blank" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--accent);background:rgba(44,65,89,0.06);border:1px solid rgba(44,65,89,0.15);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle;text-decoration:none;line-height:1.6">GitHub</a></span>
+      </div>
+      <div class="proj-detail">
+        <ul>
+          <li>个人 Agent 框架沉淀的可复用 Skill 合集，copy 到 <code style="font-size:12px;background:rgba(0,0,0,0.04);padding:0 4px;border-radius:3px">~/.claude/skills/</code> 即可使用</li>
+          <li><strong>转手/接手</strong>：FIFO 交接队列，跨 session 传递任务（原创设计）</li>
+          <li><strong>三级收工</strong>：事项/项目/日终，自动追踪进度与经验提取</li>
+          <li><strong>审问</strong>：逐问题逼出设计决策，建术语表，记录 ADR</li>
+          <li><strong>自驱/复盘</strong>：OODA 闭环积累经验与反思，驱动自我进化</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
   <!-- Personal Profile -->
   <div class="section">
     <div class="section-title">个 人 概 述</div>
@@ -902,15 +963,6 @@
       <li>致力于以 AI 主导全链路工程交付，依托 Harness 工程让 AI 做得好、做得快、省 Token</li>
       <li>以后端设计与开发为基石，兼具用户需求洞察与沟通、产品方案、UI交互、前端开发、数据开发、运维部署在内的全栈工程能力；也具备较好的项目管理与人员组织能力</li>
       <li>优秀的沟通能力，优秀的学习能力，极致的工程实践与总结能力</li>
-      <li><strong>个人理解的 Harness 工程核心能力</strong>：
-        <ul>
-          <li><strong>需求洞察与客户沟通</strong></li>
-          <li><strong>技术审美与产品力审美</strong></li>
-          <li><strong>工程团队协作</strong></li>
-          <li><strong>AI工程阵地规划、上下文工程管理、提示词工程</strong></li>
-          <li><strong>模型能力评估与选型</strong></li>
-        </ul>
-      </li>
     </ul>
   </div>
 
