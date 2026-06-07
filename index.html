@@ -7,7 +7,7 @@
 <style>
   @page {
     size: A4;
-    margin: 0;
+    margin: 10mm 0 0 0;
   }
 
   * {
@@ -29,8 +29,8 @@
 
   body {
     font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 12.5px;
+    line-height: 1.6;
     color: var(--text-primary);
     background: #fff;
     -webkit-print-color-adjust: exact;
@@ -39,9 +39,9 @@
 
   .page {
     width: 210mm;
-    min-height: 297mm;
+    height: auto;
     margin: 0 auto;
-    padding: 40px 52px 44px;
+    padding: 30px 48px 28px;
     background: #fff;
   }
 
@@ -54,9 +54,9 @@
   /* ===== Header ===== */
   .header {
     text-align: center;
-    padding-bottom: 18px;
+    padding-bottom: 14px;
     border-bottom: 2px solid var(--border-strong);
-    margin-bottom: 22px;
+    margin-bottom: 12px;
     position: relative;
   }
 
@@ -168,7 +168,7 @@
 
   /* ===== Section ===== */
   .section {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .section:last-child {
@@ -181,7 +181,7 @@
     letter-spacing: 4px;
     padding: 0 0 6px 12px;
     border-bottom: 1px solid var(--border-soft);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     color: var(--text-primary);
     position: relative;
   }
@@ -282,8 +282,9 @@
   .exp-item {
     display: flex;
     align-items: flex-start;
-    gap: 28px;
-    margin-bottom: 22px;
+    gap: 22px;
+    margin-bottom: 14px;
+    break-inside: avoid;
   }
 
   .exp-item:last-child {
@@ -354,7 +355,7 @@
   .exp-line {
     display: flex;
     align-items: baseline;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     color: var(--text-secondary);
   }
 
@@ -388,7 +389,7 @@
     border-left: 3px solid var(--accent);
     border-radius: 2px;
     padding: 10px 16px 10px 14px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .exp-shared::before {
@@ -405,7 +406,7 @@
   }
 
   .exp-shared .exp-line {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
 
   .exp-shared .exp-line:last-child {
@@ -414,7 +415,8 @@
 
   /* ===== Project ===== */
   .proj-item {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+    break-inside: avoid;
   }
 
   .proj-item:last-child {
@@ -473,7 +475,7 @@
   .proj-detail li {
     position: relative;
     color: var(--text-secondary);
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     padding-left: 2px;
   }
 
@@ -490,14 +492,14 @@
 
   /* 嵌套子项：实现下展开 Harness / 路径拆分 等子条目 */
   .proj-detail li > ul {
-    margin: 6px 0 4px;
+    margin: 4px 0 2px;
     margin-left: 2px;
     padding-left: 14px;
     border-left: 1.5px solid var(--border-hair);
   }
 
   .proj-detail li > ul > li {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     padding-left: 4px;
     color: var(--text-secondary);
   }
@@ -530,7 +532,7 @@
   }
 
   .proj-detail li > ul > li > ul > li {
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     padding-left: 4px;
     color: var(--text-secondary);
   }
@@ -569,7 +571,7 @@
   .eval-list li {
     position: relative;
     color: var(--text-secondary);
-    margin-bottom: 3px;
+    margin-bottom: 1px;
   }
 
   .eval-list li::before {
@@ -589,7 +591,7 @@
 
   /* eval-list 嵌套子项：用于 Harness 个人理解等展开 */
   .eval-list li > ul {
-    margin: 6px 0 4px;
+    margin: 4px 0 2px;
     margin-left: 2px;
     padding-left: 14px;
     border-left: 1.5px solid var(--border-hair);
@@ -598,7 +600,7 @@
 
   .eval-list li > ul > li {
     position: relative;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     padding-left: 4px;
     color: var(--text-secondary);
   }
@@ -628,7 +630,7 @@
     body { background: #fff; }
     .page {
       margin: 0;
-      padding: 36px 48px 40px;
+      padding: 13px 48px 40px;
       box-shadow: none;
     }
   }
@@ -775,33 +777,19 @@
       </div>
     </div>
 
-    <div class="subsection-title no-line" style="margin-top:28px">AI · 2025.11 — 至 今</div>
+    <div class="subsection-title no-line" style="margin-top:28px; page-break-before:auto">AI · 2025.11 — 至 今</div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2026.04 - 2026.05</span>
-        <span class="name">财务对接 · 对账自动化</span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li><strong>背景</strong>：海外广告月度财务对账，涉及账期记录、汇率换算、账单推送与异常 case 处理</li>
-          <li><strong>实现</strong>：先以后端模块完成账单数据加工与推账对接；后沉淀对账 Skill 套件，覆盖数据校验、明细核对、跨月异常处理、账单导出。提高月结效率</li>
-          <li><strong>技术栈</strong>：Java 后端 + Python Skill</li>
-        </ul>
+        <span class="name">网易有道 · 财务对账自动化<span class="desc">后端模块完成账单数据加工与推账对接，沉淀对账 Skill 套件覆盖数据校验、明细核对、跨月异常处理</span></span>
       </div>
     </div>
 
-    <div class="proj-item">
+    <div class="proj-item proj-item-inline">
       <div class="proj-header">
         <span class="time">2025.11 - 2026.03</span>
-        <span class="name">有道视觉魔盒 · AI 素材制作工具</span>
-      </div>
-      <div class="proj-detail">
-        <ul>
-          <li><strong>背景</strong>：为海外广告业务提供 AI 素材生成能力</li>
-          <li><strong>实现</strong>：接入 Gemini、即梦、nano-banana，封装统一素材生成 API；覆盖图片缩放裁剪、封面提取、素材爆款要素分析等功能场景；通过提示词工程与接口参数(topK,temperature)调试，控制模型输出</li>
-          <li><strong>技术栈</strong>：Java 后端</li>
-        </ul>
+        <span class="name">网易有道 · AI 素材制作工具<span class="desc">接入 Gemini、即梦等模型，封装统一素材生成 API，覆盖图片缩放裁剪、封面提取、爆款要素分析</span></span>
       </div>
     </div>
 
@@ -858,16 +846,9 @@
       </div>
       <div class="proj-detail">
         <ul>
-          <li><strong>背景</strong>：组内 Web 端对话式业务智能体建设，覆盖知识检索、MCP、Skill Package、权限管控及反馈闭环等核心模块</li>
-          <li><strong>技术栈</strong>：Python (FastAPI) + React + TypeScript + MySQL + Chroma + Redis；Agent 框架基于 LangGraph</li>
-          <li><strong>实现</strong>：主导后端架构与项目路径规划、前后端交互接口设计，与同事协作搭建 RAG 检索链路；典型接口如 SSE 流式对话 / 反馈写入 / 文档同步等
-            <ul>
-              <li><strong>对话能力</strong>：普通问答、SSE 流式输出、会话历史、附件图片上传</li>
-              <li><strong>知识入库</strong>：Confluence / Markdown / PDF / DOCX 多源入库，多 provider 检索与重排</li>
-              <li><strong>扩展接入</strong>：MCP 与本地 Skill Package 作为 provider 统一接入 Runtime</li>
-              <li><strong>反馈闭环</strong>：正负反馈、人工修正、QA 写入与审核工作台</li>
-            </ul>
-          </li>
+          <li><strong>背景</strong>：组内 Web 端对话式业务智能体，覆盖知识检索、MCP、Skill Package、权限管控及反馈闭环</li>
+          <li><strong>技术栈</strong>：Python (FastAPI) + React + TS + MySQL + Chroma + Redis；Agent 框架基于 LangGraph</li>
+          <li><strong>实现</strong>：主导后端架构与接口设计，协作搭建 RAG 检索链路；SSE 流式对话 / 多源知识入库 / MCP+Skill 扩展 / 正负反馈与审核工作台</li>
         </ul>
       </div>
     </div>
@@ -942,6 +923,7 @@
       <li>致力于以 AI 主导全链路工程交付，依托 Harness 工程让 AI 做得好、做得快、省 Token</li>
       <li>以后端设计与开发为基石，兼具用户需求洞察与沟通、产品方案、UI交互、前端开发、数据开发、运维部署在内的全栈工程能力；也具备较好的项目管理与人员组织能力</li>
       <li>优秀的沟通能力，优秀的学习能力，极致的工程实践与总结能力</li>
+      <li>超绝的想象力，干就完事了</li>
     </ul>
   </div>
 
