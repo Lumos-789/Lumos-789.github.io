@@ -39,7 +39,7 @@ gh repo create Lumos-789/Guster --public --description "AI-powered project manag
 | `self-drive/README.md` | `self-drive/dashboard.md`（实际评分） |
 | `self-drive/experiences/README.md` | `knowledge/projects/` 实际项目知识 |
 | `self-drive/insights/README.md` | `provision/tracker.md`（含服务凭证信息） |
-| `self-drive/reflections/README.md` | `provision/chrome-takeover-setup.md` |
+| `self-drive/reflections/README.md` | `provision/cdp-takeover-setup.md` |
 | `provision/README.md` | `.claude/`（session 数据） |
 | `projects/_registry.md`（脱敏：只留表头和一行示例） | `scripts/`（个人工具脚本） |
 | `projects/archive.md`（脱敏：清空实际条目） | `plans/`（生成的计划文档） |
